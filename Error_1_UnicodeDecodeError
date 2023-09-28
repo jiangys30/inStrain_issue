@@ -1,0 +1,73 @@
+Building a LARGE index
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.3.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.3.bt2l
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.4.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.4.bt2l
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.1.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.1.bt2l
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.2.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.2.bt2l
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.rev.1.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.rev.1.bt2l
+Renaming ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.rev.2.bt2l.tmp to ../instrain_result/Porphyromonas_endodontalis/bt2/reference_database.fasta.bt2.rev.2.bt2l
+223861232 reads; of these:
+  223861232 (100.00%) were paired; of these:
+    223845193 (99.99%) aligned concordantly 0 times
+    2 (0.00%) aligned concordantly exactly 1 time
+    16037 (0.01%) aligned concordantly >1 times
+    ----
+    223845193 pairs aligned concordantly 0 times; of these:
+      1 (0.00%) aligned discordantly 1 time
+    ----
+    223845192 pairs aligned 0 times concordantly or discordantly; of these:
+      447690384 mates make up the pairs; of these:
+        447684889 (100.00%) aligned 0 times
+        7 (0.00%) aligned exactly 1 time
+        5488 (0.00%) aligned >1 times
+0.01% overall alignment rate
+You gave me a sam- I'm going to make it a .bam now
+Converting ../instrain_result/Porphyromonas_endodontalis/bowtie2_result/s11_11.sam to ../instrain_result/Porphyromonas_endodontalis/bowtie2_result/s11_11.bam
+sorting ../instrain_result/Porphyromonas_endodontalis/bowtie2_result/s11_11.bam
+[bam_sort_core] merging from 9 files and 20 in-memory blocks...
+Indexing ../instrain_result/Porphyromonas_endodontalis/bowtie2_result/s11_11.sorted.bam
+***************************************************
+    ..:: inStrain profile Step 1. Filter reads ::..
+***************************************************
+
+^MFiltering reads:   0%|          | 0/39 [00:00<?, ?it/s]^MFiltering reads:   3%|▎         | 1/39 [00:29<18:22, 29.03s/it]^MFiltering reads: 100%|██████████| 39/39 [00:29<00:00,  1.88it/s]^MFiltering reads: 100%|██████████| 39/39 [00:29<00:00,  1.33it/s]
+Scaffold to bin was made using .stb file
+0 of 2 genomes have less than 1x estimated coverage
+0 of the original 39 scaffolds are removed (0 have a low coverage genome; 0 have no genome)
+8.3% of pairs and 100.0% of singletons were removed during filtering
+15,488 read pairs remain (0.004646 Gbp)
+***************************************************
+.:: inStrain profile Step 2. Profile scaffolds ::..
+***************************************************
+
+Traceback (most recent call last):
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/bin/inStrain", line 31, in <module>
+    inStrain.controller.Controller().main(args)
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/controller.py", line 54, in main
+    self.profile_operation(args)
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/controller.py", line 86, in profile_operation
+    ProfileController(args).main()
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/controller.py", line 155, in main
+    self.run_profile()
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/controller.py", line 333, in run_profile
+    self.ISP = inStrain.profile.profile_bam(self.bam, self.fasta_db,
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/profile/__init__.py", line 17, in profile_bam
+    return inStrain.profile.profile_controller.BamProfileController(
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/profile/profile_controller.py", line 48, in main
+    self.gen_prof_args()
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/profile/profile_controller.py", line 78, in gen_prof_args
+    self.gen_genes_args()
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/profile/profile_controller.py", line 89, in gen_genes_args
+    scaff2geneinfo, scaff2gene2sequence = inStrain.GeneProfile.parse_genes(gene_file, **self.kwargs)
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/GeneProfile.py", line 761, in parse_genes
+    return parse_prodigal_genes(gene_file_loc)
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/inStrain/GeneProfile.py", line 778, in parse_prodigal_genes
+    for record in SeqIO.parse(gene_fasta, 'fasta'):
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/Bio/SeqIO/__init__.py", line 661, in parse
+    for r in i:
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/Bio/SeqIO/FastaIO.py", line 176, in FastaIterator
+    for title, sequence in SimpleFastaParser(handle):
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/site-packages/Bio/SeqIO/FastaIO.py", line 45, in SimpleFastaParser
+    for line in handle:
+  File "/lustre1/g/aos_shihuang/tools/anaconda3/envs/inStrain/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbb in position 3: invalid start byte
